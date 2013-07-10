@@ -3,7 +3,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  var indexTxt = fs.readFileSync("index.html", {"encoding":"String"});
+  var indexTxt = fs.readFileSync("index.html", "utf8");
   response.send(indexTxt);
 });
 
